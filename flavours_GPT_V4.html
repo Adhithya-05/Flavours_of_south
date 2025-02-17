@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Flavors of South - Sambar Powder</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Animate.css for text animations -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"
+  />
+
+  <style>
+    /* Slight yellowish background for the entire page */
+    body {
+      background-color: #fff9e6;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden; /* Hide horizontal scroll if shapes animate off-screen */
+    }
+
+    /* Navbar brand logo */
+    .brand-logo {
+      max-width: 80px;
+      max-height: 80px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    /* Hero section with grey overlay + spice background */
+    .hero {
+      position: relative;
+      background: url('https://images.unsplash.com/photo-1567767290565-49a06f3eb2ce?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80')
+                  center/cover no-repeat;
+      color: #fff;
+      padding: 60px 0;
+      z-index: 1;
+    }
+    .hero-overlay {
+      background-color: rgba(128, 128, 128, 0.5); /* Grey overlay */
+      padding: 60px 0;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+    .hero p {
+      font-size: 1.25rem;
+    }
+
+    /* Sambar Powder Image Section */
+    .sambar-section img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+
+    /* Pricing cards */
+    .pricing-card img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 6px;
+      margin-bottom: 15px;
+    }
+
+    /* Form container */
+    .form-section {
+      background: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+    }
+
+    /* Floating shapes for subtle animation in background */
+    .floating-shape {
+      position: absolute;
+      width: 250px;
+      height: 250px;
+      background: radial-gradient(circle at center, #ffd9b3, transparent 70%);
+      border-radius: 50%;
+      z-index: 0; /* Behind content */
+      animation: floaty 6s ease-in-out infinite;
+    }
+    .floating-shape-2 {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      background: radial-gradient(circle at center, #ffc299, transparent 60%);
+      border-radius: 50%;
+      z-index: 0;
+      animation: floaty2 8s ease-in-out infinite;
+    }
+
+    @keyframes floaty {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(20px); }
+      100% { transform: translateY(0); }
+    }
+    @keyframes floaty2 {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+      100% { transform: translateY(0); }
+    }
+
+    /* Footer */
+    footer {
+      background-color: #f8f9fa;
+    }
+  </style>
+</head>
+<body>
+  <!-- Subtle floating shapes in the background -->
+  <div class="floating-shape" style="top: -100px; left: -100px;"></div>
+  <div class="floating-shape-2" style="bottom: -100px; right: -100px;"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+    <div class="container">
+      <!-- Replace 'flavors-of-south-logo.png' with your actual logo image -->
+      <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
+        <img
+          src="flavors-of-south-logo.png"
+          alt="Flavors of South Logo"
+          class="brand-logo me-2"
+        />
+        Flavors of South
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <!-- WhatsApp contact info -->
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item d-flex align-items-center">
+            <!-- Replace 'whatsapp.png' with a WhatsApp logo image if you have one -->
+            <img
+              src="whatsapp.png"
+              alt="WhatsApp"
+              style="width:24px; margin-right:8px;"
+            />
+            <span>+91 9487762302</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero text-center">
+    <div class="hero-overlay">
+      <div class="container">
+        <h1 class="animate__animated animate__fadeInDown">
+          Authentic Sambar Powder
+        </h1>
+        <p class="animate__animated animate__fadeInUp">
+          Experience the Taste of South India, Delivered to Your Doorstep
+        </p>
+        <!-- No Preservatives Added badge -->
+        <p class="animate__animated animate__zoomIn">
+          <span class="badge bg-warning text-dark">No Preservatives Added</span>
+        </p>
+        <a href="#order" class="btn btn-warning btn-lg mt-3 animate__animated animate__pulse animate__infinite">
+          Order Now
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sambar Powder Image Section -->
+  <section class="py-5 sambar-section">
+    <div class="container text-center">
+      <h2 class="mb-4 animate__animated animate__fadeInLeft">What Makes Our Sambar Powder Special?</h2>
+      <!-- Replace with your own Sambar powder image -->
+      <img
+        src="https://images.unsplash.com/photo-1586009197305-2ea12f2beeb6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        alt="Sambar Powder"
+        class="animate__animated animate__fadeInRight"
+      />
+      <p class="mt-4 lead animate__animated animate__fadeInUp">
+        Our carefully blended Sambar Powder is made with fresh, aromatic spices to bring you the authentic flavor of South Indian cuisine.
+      </p>
+    </div>
+  </section>
+
+  <!-- Pricing/Info Section -->
+  <section class="py-5">
+    <div class="container text-center">
+      <h2 class="mb-4 animate__animated animate__bounceIn">Premium Quality at an Affordable Price</h2>
+      <p class="lead mb-5 animate__animated animate__fadeInUp">
+        Choose from a range of packet sizes and enjoy the rich taste of South India.
+      </p>
+      <div class="row justify-content-center g-4">
+        <!-- Card 1: 950 grams -->
+        <div class="col-md-3 animate__animated animate__fadeInUp">
+          <div class="card border-0 shadow-sm pricing-card">
+            <!-- Replace with your own 950g packet image -->
+            <img
+              src="https://via.placeholder.com/200?text=950g+Packet"
+              alt="950g Packet"
+            />
+            <div class="card-body">
+              <h4 class="card-title mb-3">950 grams</h4>
+              <p class="card-text fs-5 fw-bold">600 INR</p>
+            </div>
+          </div>
+        </div>
+        <!-- Card 2: 1950 grams -->
+        <div class="col-md-3 animate__animated animate__fadeInUp">
+          <div class="card border-0 shadow-sm pricing-card">
+            <!-- Replace with your own 1950g packet image -->
+            <img
+              src="https://via.placeholder.com/200?text=1950g+Packet"
+              alt="1950g Packet"
+            />
+            <div class="card-body">
+              <h4 class="card-title mb-3">1950 grams</h4>
+              <p class="card-text fs-5 fw-bold">1100 INR</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Order Form Section -->
+  <section class="pb-5" id="order">
+    <div class="container">
+      <h2 class="text-center mb-4 animate__animated animate__fadeInDown">Place Your Order</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-6 form-section animate__animated animate__fadeInUp">
+          <form onsubmit="sendWhatsApp(event)">
+            <div class="mb-3">
+              <label for="name" class="form-label fw-semibold">Full Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                placeholder="Enter your full name"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="weight" class="form-label fw-semibold">Select Weight</label>
+              <select class="form-select" id="weight" required>
+                <!-- Removing 1Kg & 2Kg, start from 3Kg -->
+                <option value="3Kg">3Kg</option>
+                <option value="4Kg">4Kg</option>
+                <option value="5Kg">5Kg</option>
+                <option value="6Kg">6Kg</option>
+                <option value="7Kg">7Kg</option>
+                <option value="8Kg">8Kg</option>
+                <option value="9Kg">9Kg</option>
+                <option value="10Kg">10Kg</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="address" class="form-label fw-semibold">Delivery Address</label>
+              <input
+                type="text"
+                class="form-control"
+                id="address"
+                placeholder="Enter your delivery address"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="phone" class="form-label fw-semibold">Phone Number</label>
+              <input
+                type="tel"
+                class="form-control"
+                id="phone"
+                placeholder="Enter your phone number"
+                required
+              />
+            </div>
+            <!-- Button changed to 'Confirm Your Order' -->
+            <button type="submit" class="btn btn-success w-100">
+              Confirm Your Order
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-3 mt-auto">
+    <div class="container text-center">
+      <p class="m-0">© 2025 Flavors of South. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+  ></script>
+
+  <script>
+    // On form submission, open WhatsApp with the user's order details
+    function sendWhatsApp(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const weight = document.getElementById('weight').value;
+      const address = document.getElementById('address').value;
+      const phone = document.getElementById('phone').value;
+
+      // Construct a message to send via WhatsApp
+      const msg = `Hello Lakshmi,%0A%0AI'd like to place an order:%0AName: ${name}%0AWeight: ${weight}%0AAddress: ${address}%0APhone: ${phone}%0A(No Preservatives Added)`;
+
+      // Open WhatsApp chat with your number and pre-filled text
+      window.open(`https://wa.me/919487762302?text=${msg}`, '_blank');
+    }
+  </script>
+</body>
+</html>
