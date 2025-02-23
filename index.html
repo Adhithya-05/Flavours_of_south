@@ -157,10 +157,10 @@
     }
     /* Wrapper for Second Background Image (Image 2) */
     .second-bg-wrapper {
-      background: url('wmremove-transformed.jpeg') no-repeat center center;
+      background: url('Kanji_maavu_bg_image.png') no-repeat center center;
       background-size: cover;
-      animation: backgroundPan 25s ease-in-out infinite alternate;
       padding: 60px 0;
+      transition: opacity 1s ease-in-out;
     }
     /* WhatsApp Overlay */
     .whatsapp-overlay {
@@ -178,7 +178,7 @@
       background-color: #f8f9fa;
       padding: 20px 0;
     }
-    /* Custom Keyframes for Background Panning */
+    /* Custom Keyframes for Background Panning (used in special section only) */
     @keyframes backgroundPan {
       0% { background-position: center; }
       100% { background-position: center bottom; }
@@ -235,7 +235,7 @@
   <section class="special-section cascade">
     <div class="special-overlay">
       <h2>What Makes Our Sambar Powder Special?</h2>
-      <h3>Best Sambar Powder Recipe</h3>
+      <h3>Authentic Sambar Powder Recipe</h3>
       <p class="lead">
         Our carefully blended Sambar Powder is made with fresh, aromatic spices to bring you the authentic flavor of South Indian cuisine.
       </p>
@@ -245,17 +245,19 @@
       </div>
     </div>
   </section>
-
-  <!-- Wrapper with Second Background Image -->
+  
+  <!-- Wrapper with Second Background Image (Pricing/Info Section) -->
   <section class="second-bg-wrapper">
-    <!-- Pricing/Info Section with Content Box -->
     <section class="py-5 cascade">
       <div class="container text-center content-box">
         <h2 class="animate__animated animate__bounceIn">Premium Quality at an Affordable Price</h2>
         <p class="lead animate__animated animate__fadeInUp">
           Enjoy the rich taste of South India.
         </p>
+
         <div class="row justify-content-center g-4">
+          <!-- Sambar Powder Section -->
+          <div class="col-md-12 text-start fw-bold fs-5">Sambar powder:</div>
           <div class="col-md-3 cascade">
             <div class="card pricing-card">
               <div class="card-body">
@@ -280,63 +282,100 @@
               </div>
             </div>
           </div>
-        </div>
-        <p class="card-text fs-5 fw-bold">Additional courier charges may apply.</p>
-      </div>
-    </section>
 
-    <!-- Order Form Section with Content Box -->
-    <section class="pb-5 cascade" id="order">
-      <div class="container content-box">
-        <h2 class="text-center animate__animated animate__fadeInDown">Place Your Order</h2>
-        <div class="row justify-content-center">
-          <div class="col-md-6 form-section animate__animated animate__fadeInUp">
-            <form onsubmit="sendWhatsApp(event)">
-              <div class="mb-3">
-                <label for="name" class="form-label fw-semibold">Full Name</label>
-                <input type="text" class="form-control" id="name" placeholder="Enter your full name" required>
+          <!-- Kanji Powder Section -->
+          <div class="col-md-12 text-start fw-bold fs-5 mt-4">Health Mix Powder :</div>
+          <div class="col-md-3 cascade">
+            <div class="card pricing-card">
+              <div class="card-body">
+                <h4 class="card-title mb-3">450 grams</h4>
+                <p class="card-text fs-5 fw-bold">₹250</p>
               </div>
-              <div class="mb-3">
-                <label for="weight" class="form-label fw-semibold">Select Weight</label>
-                <select class="form-select" id="weight" required>
-                  <option value="1/2Kg">1/2Kg</option>
-                  <option value="1Kg">1Kg</option>
-                  <option value="2Kg">2Kg</option>
-                  <option value="3Kg">3Kg</option>
-                  <option value="4Kg">4Kg</option>
-                  <option value="5Kg">5Kg</option>
-                  <option value="6Kg">6Kg</option>
-                  <option value="7Kg">7Kg</option>
-                  <option value="8Kg">8Kg</option>
-                  <option value="9Kg">9Kg</option>
-                  <option value="10Kg">10Kg</option>
-                </select>
+            </div>
+          </div>
+          <div class="col-md-3 cascade">
+            <div class="card pricing-card">
+              <div class="card-body">
+                <h4 class="card-title mb-3">950 grams</h4>
+                <p class="card-text fs-5 fw-bold">₹500</p>
               </div>
-              <div class="mb-3">
-                <label for="address" class="form-label fw-semibold">Delivery Address (Enter with Zip/postal code)</label>
-                <input type="text" class="form-control" id="address" placeholder="Enter your delivery address" required>
+            </div>
+          </div>
+          <div class="col-md-3 cascade">
+            <div class="card pricing-card">
+              <div class="card-body">
+                <h4 class="card-title mb-3">1950 grams</h4>
+                <p class="card-text fs-5 fw-bold">₹900</p>
               </div>
-              <div class="mb-3">
-                <label for="phone" class="form-label fw-semibold">Phone Number</label>
-                <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
-              </div>
-              <button type="submit" class="btn btn-success w-100">Create Order</button>
-            </form>
+            </div>
           </div>
         </div>
+
+        <!-- Courier Charges Note -->
+        <p class="card-text fs-5 fw-bold mt-3">Additional courier charges may apply.</p>
       </div>
     </section>
+  </section>
 
-    <!-- WhatsApp Section -->
-    <section class="cascade">
-      <div class="container text-center">
-        <div class="whatsapp-overlay">
-          <p class="fw-bold">
-            Want to sell it across in your city? Write to us directly on WhatsApp!
-          </p>
+  <!-- Order Form Section with Content Box -->
+  <section class="pb-5 cascade" id="order">
+    <div class="container content-box">
+      <h2 class="text-center animate__animated animate__fadeInDown">Place Your Order</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-6 form-section animate__animated animate__fadeInUp">
+          <form onsubmit="sendWhatsApp(event)">
+            <div class="mb-3">
+              <label for="name" class="form-label fw-semibold">Full Name</label>
+              <input type="text" class="form-control" id="name" placeholder="Enter your full name" required>
+            </div>
+            <div class="mb-3">
+                <label for="Product" class="form-label fw-semibold">Select Product</label>
+                <select class="form-select" id="Product" required>
+                  <option value="Sambar Powder">Sambar Powder</option>
+                  <option value="Health Mix Powder">Health Mix Powder</option>
+               
+                </select>
+              </div>   
+            <div class="mb-3">
+              <label for="weight" class="form-label fw-semibold">Select Weight</label>
+              <select class="form-select" id="weight" required>
+                <option value="1/2Kg">1/2Kg</option>
+                <option value="1Kg">1Kg</option>
+                <option value="2Kg">2Kg</option>
+                <option value="3Kg">3Kg</option>
+                <option value="4Kg">4Kg</option>
+                <option value="5Kg">5Kg</option>
+                <option value="6Kg">6Kg</option>
+                <option value="7Kg">7Kg</option>
+                <option value="8Kg">8Kg</option>
+                <option value="9Kg">9Kg</option>
+                <option value="10Kg">10Kg</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="address" class="form-label fw-semibold">Delivery Address (Enter with PIN code)</label>
+              <input type="text" class="form-control" id="address" placeholder="Enter your delivery address" required>
+            </div>
+            <div class="mb-3">
+              <label for="phone" class="form-label fw-semibold">Phone Number</label>
+              <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
+            </div>
+            <button type="submit" class="btn btn-success w-100">Create Order</button>
+          </form>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
+
+  <!-- WhatsApp Section -->
+  <section class="cascade">
+    <div class="container text-center">
+      <div class="whatsapp-overlay">
+        <p class="fw-bold">
+          Want to sell it across in your city? Write to us directly on WhatsApp!
+        </p>
+      </div>
+    </div>
   </section>
 
   <!-- Footer -->
@@ -355,9 +394,10 @@
       e.preventDefault();
       const name = document.getElementById('name').value;
       const weight = document.getElementById('weight').value;
+      const Product = document.getElementById('Product').value;
       const address = document.getElementById('address').value;
       const phone = document.getElementById('phone').value;
-      const msg = `Hello Lakshmi, Order Details: Name: ${name} Weight: ${weight} Address: ${address} Phone: ${phone} Thank you!`;
+      const msg = `Hello Lakshmi, Order Details: Name: ${name} Product: ${Product} Weight: ${weight} Address: ${address} Phone: ${phone} Thank you!`;
       const encodedMsg = encodeURIComponent(msg);
       window.open(`https://api.whatsapp.com/send?phone=919487762302&text=${encodedMsg}`, '_blank');
     }
@@ -378,6 +418,32 @@
       document.querySelectorAll('.cascade').forEach(el => {
         observer.observe(el);
       });
+    });
+  </script>
+  
+  <!-- JavaScript for Background Image Toggle in the Second Section -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Order of images: first Kanji_maavu_bg_image.png, then wmremove-transformed.jpeg
+      let images = ['Kanji_maavu_bg_image.png', 'wmremove-transformed.jpeg'];
+      let index = 0;
+      const section = document.querySelector('.second-bg-wrapper');
+      
+      function changeBackground() {
+        // Fade out
+        section.style.opacity = 0;
+        setTimeout(() => {
+          index = (index + 1) % images.length;
+          section.style.backgroundImage = `url('${images[index]}')`;
+          // Fade in
+          section.style.opacity = 1;
+        }, 500);
+      }
+      
+      // Initialize with the first image and full opacity
+      section.style.backgroundImage = `url('${images[0]}')`;
+      section.style.opacity = 1;
+      setInterval(changeBackground, 7000);
     });
   </script>
 </body>

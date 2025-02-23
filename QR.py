@@ -15,5 +15,5 @@ def generate_qr_code(link, filename="qr_code.png"):
     print(f"QR code saved as {filename}")
 
 if __name__ == "__main__":
-    link = "https://adhithya-05.github.io/Flavours_of_south.github.io/#order"
+    link = "https://adhithya-05.github.io/Flavours_of_south.github.io"
     generate_qr_code(link)
