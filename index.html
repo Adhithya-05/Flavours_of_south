@@ -320,131 +320,163 @@
   <!-- Order Form Section with Content Box -->
   <section class="pb-5 cascade" id="order">
     <div class="container content-box">
-      <h2 class="text-center animate__animated animate__fadeInDown">Place Your Order</h2>
-      <div class="row justify-content-center">
-        <div class="col-md-6 form-section animate__animated animate__fadeInUp">
-          <form onsubmit="sendWhatsApp(event)">
-            <div class="mb-3">
-              <label for="name" class="form-label fw-semibold">Full Name</label>
-              <input type="text" class="form-control" id="name" placeholder="Enter your full name" required>
+        <h2 class="text-center animate__animated animate__fadeInDown">Place Your Order</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-6 form-section animate__animated animate__fadeInUp">
+                <form onsubmit="sendWhatsApp(event)">
+                    <div class="mb-3">
+                        <label for="name" class="form-label fw-semibold">Full Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="Product" class="form-label fw-semibold">Select Product</label>
+                        <select class="form-select" id="Product" required onchange="updatePrice()">
+                            <option value="Sambar Powder">Sambar Powder</option>
+                            <option value="Health Mix Powder">Health Mix Powder</option>
+                        </select>
+                    </div>   
+                    <div class="mb-3">
+                        <label for="weight" class="form-label fw-semibold">Select Weight</label>
+                        <select class="form-select" id="weight" required onchange="updatePrice()">
+                            <option value="450g">450g</option>
+                            <option value="950g">950g</option>
+                            <option value="1950g">1950g</option>
+                            <option value="2900g">2900g</option>
+                            <option value="3900g">3900g</option>
+                            <option value="4900g">4900g</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="price" class="form-label fw-semibold">Price excluding courier(₹)</label>
+                        <input type="text" class="form-control" id="price" readonly>
+                    </div>
+                    <div class="mb-3">
+                        <label for="address" class="form-label fw-semibold">Delivery Address (Enter with PIN code)</label>
+                        <input type="text" class="form-control" id="address" placeholder="Enter your delivery address" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="phone" class="form-label fw-semibold">Phone Number</label>
+                        <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
+                    </div>
+                    <button type="submit" class="btn btn-success w-100">Create Order</button>
+                </form>
             </div>
-            <div class="mb-3">
-                <label for="Product" class="form-label fw-semibold">Select Product</label>
-                <select class="form-select" id="Product" required>
-                  <option value="Sambar Powder">Sambar Powder</option>
-                  <option value="Health Mix Powder">Health Mix Powder</option>
-               
-                </select>
-              </div>   
-            <div class="mb-3">
-              <label for="weight" class="form-label fw-semibold">Select Weight</label>
-              <select class="form-select" id="weight" required>
-                <option value="1/2Kg">1/2Kg</option>
-                <option value="1Kg">1Kg</option>
-                <option value="2Kg">2Kg</option>
-                <option value="3Kg">3Kg</option>
-                <option value="4Kg">4Kg</option>
-                <option value="5Kg">5Kg</option>
-                <option value="6Kg">6Kg</option>
-                <option value="7Kg">7Kg</option>
-                <option value="8Kg">8Kg</option>
-                <option value="9Kg">9Kg</option>
-                <option value="10Kg">10Kg</option>
-              </select>
-            </div>
-            <div class="mb-3">
-              <label for="address" class="form-label fw-semibold">Delivery Address (Enter with PIN code)</label>
-              <input type="text" class="form-control" id="address" placeholder="Enter your delivery address" required>
-            </div>
-            <div class="mb-3">
-              <label for="phone" class="form-label fw-semibold">Phone Number</label>
-              <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
-            </div>
-            <button type="submit" class="btn btn-success w-100">Create Order</button>
-          </form>
         </div>
-      </div>
     </div>
-  </section>
+</section>
 
-  <!-- WhatsApp Section -->
-  <section class="cascade">
-    <div class="container text-center">
-      <div class="whatsapp-overlay">
-        <p class="fw-bold">
-          Want to sell it across in your city? Write to us directly on WhatsApp!
-        </p>
-      </div>
-    </div>
-  </section>
+<script>
+    function updatePrice() {
+        const product = document.getElementById("Product").value;
+        const weight = document.getElementById("weight").value;
+        let price = 0;
 
-  <!-- Footer -->
-  <footer class="mt-auto">
-    <div class="container text-center">
-      <p class="m-0">© 2025 Flavors of South. All rights reserved.</p>
-    </div>
-  </footer>
+        // Updated Pricing logic for Sambar Powder
+        const priceList = {
+            "Sambar Powder": {
+                "450g": 300,
+                "950g": 600,
+                "1950g": 1100,
+                "2900g": 1700,  // updated value
+                "3900g": 2300,  // updated value
+                "4900g": 2800   // updated value
+            },
+            "Health Mix Powder": {
+                "450g": 250,
+                "950g": 500,
+                "1950g": 900,
+                "2900g": 1350,
+                "3900g": 1800,
+                "4900g": 2200
+            }
+        };
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  
-  <!-- JavaScript for Order Form (WhatsApp Integration) -->
-  <script>
-    function sendWhatsApp(e) {
-      e.preventDefault();
-      const name = document.getElementById('name').value;
-      const weight = document.getElementById('weight').value;
-      const Product = document.getElementById('Product').value;
-      const address = document.getElementById('address').value;
-      const phone = document.getElementById('phone').value;
-      const msg = `Hello Lakshmi, Order Details: Name: ${name} Product: ${Product} Weight: ${weight} Address: ${address} Phone: ${phone} Thank you!`;
-      const encodedMsg = encodeURIComponent(msg);
-      window.open(`https://api.whatsapp.com/send?phone=919487762302&text=${encodedMsg}`, '_blank');
+        if (priceList[product] && priceList[product][weight]) {
+            price = priceList[product][weight];
+        }
+
+        document.getElementById("price").value = `₹${price}`;
     }
-  </script>
+</script>
+
+<!-- WhatsApp Section -->
+<section class="cascade">
+  <div class="container text-center">
+    <div class="whatsapp-overlay">
+      <p class="fw-bold">
+        Want to sell it across in your city? Write to us directly on WhatsApp!
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="mt-auto">
+  <div class="container text-center">
+    <p class="m-0">© 2025 Flavors of South. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   
-  <!-- JavaScript for Cascading Effect using IntersectionObserver -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('in-view');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.2 });
+<!-- JavaScript for Order Form (WhatsApp Integration) -->
+<script>
+  function sendWhatsApp(e) {
+    e.preventDefault();
+    const name = document.getElementById('name').value;
+    const weight = document.getElementById('weight').value;
+    const Product = document.getElementById('Product').value;
+    const address = document.getElementById('address').value;
+    const phone = document.getElementById('phone').value;
+    const msg = `Hello Lakshmi, Order Details: Name: ${name} Product: ${Product} Weight: ${weight} Address: ${address} Phone: ${phone} Thank you for choosing us!`;
+    const encodedMsg = encodeURIComponent(msg);
+    window.open(`https://api.whatsapp.com/send?phone=919487762302&text=${encodedMsg}`, '_blank');
+  }
+</script>
   
-      document.querySelectorAll('.cascade').forEach(el => {
-        observer.observe(el);
+<!-- JavaScript for Cascading Effect using IntersectionObserver -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          observer.unobserve(entry.target);
+        }
       });
-    });
-  </script>
+    }, { threshold: 0.2 });
   
-  <!-- JavaScript for Background Image Toggle in the Second Section -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      // Order of images: first Kanji_maavu_bg_image.png, then wmremove-transformed.jpeg
-      let images = ['Kanji_maavu_bg_image.png', 'wmremove-transformed.jpeg'];
-      let index = 0;
-      const section = document.querySelector('.second-bg-wrapper');
-      
-      function changeBackground() {
-        // Fade out
-        section.style.opacity = 0;
-        setTimeout(() => {
-          index = (index + 1) % images.length;
-          section.style.backgroundImage = `url('${images[index]}')`;
-          // Fade in
-          section.style.opacity = 1;
-        }, 500);
-      }
-      
-      // Initialize with the first image and full opacity
-      section.style.backgroundImage = `url('${images[0]}')`;
-      section.style.opacity = 1;
-      setInterval(changeBackground, 7000);
+    document.querySelectorAll('.cascade').forEach(el => {
+      observer.observe(el);
     });
-  </script>
+  });
+</script>
+  
+<!-- JavaScript for Background Image Toggle in the Second Section -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Order of images: first Kanji_maavu_bg_image.png, then wmremove-transformed.jpeg
+    let images = ['Kanji_maavu_bg_image.png', 'wmremove-transformed.jpeg'];
+    let index = 0;
+    const section = document.querySelector('.second-bg-wrapper');
+    
+    function changeBackground() {
+      // Fade out
+      section.style.opacity = 0;
+      setTimeout(() => {
+        index = (index + 1) % images.length;
+        section.style.backgroundImage = `url('${images[index]}')`;
+        // Fade in
+        section.style.opacity = 1;
+      }, 500);
+    }
+    
+    // Initialize with the first image and full opacity
+    section.style.backgroundImage = `url('${images[0]}')`;
+    section.style.opacity = 1;
+    setInterval(changeBackground, 7000);
+  });
+</script>
 </body>
 </html>
