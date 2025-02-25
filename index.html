@@ -234,11 +234,15 @@
         +91 9487762302
       </a>
       <div>
-        <a href="#order" class="btn btn-warning btn-lg animate__animated animate__pulse animate__infinite">
-          Order Now
-        </a>
-      </div>
-    </div>
+    <a href="#order" class="btn btn-warning btn-lg animate__animated animate__pulse animate__infinite mb-4">
+        Order Now
+    </a>
+</div>
+
+<p class="card-text fs-16 fw-medium mt-4">
+    Scroll Down ⬇️
+</p>
+
   </section>
 
   <!-- Special Section with Background Image (Image 1) -->
@@ -264,87 +268,116 @@
         <p class="lead animate__animated animate__fadeInUp">
           Enjoy the rich taste of South India.
         </p>
-        <div class="row justify-content-center g-4">
-          <!-- Sambar Powder Section -->
-          <div class="col-md-12 text-start fw-bold fs-5">Sambar Powder:</div>
-          <div class="col-md-3 cascade">
-            <div class="card pricing-card">
-              <div class="card-body">
-                <h4 class="card-title mb-3">450 grams</h4>
-                <p class="card-text fs-5 fw-bold">₹300</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 cascade">
-            <div class="card pricing-card">
-              <div class="card-body">
-                <h4 class="card-title mb-3">950 grams</h4>
-                <p class="card-text fs-5 fw-bold">₹600</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 cascade">
-            <div class="card pricing-card">
-              <div class="card-body">
-                <h4 class="card-title mb-3">1950 grams</h4>
-                <p class="card-text fs-5 fw-bold">₹1100</p>
-              </div>
-            </div>
-          </div>
+       <!-- Pricing Cards -->
+<div class="row justify-content-center g-4">
+  <!-- Sambar Powder Section -->
+  <div class="col-md-12 text-start fw-bold fs-5">Sambar Powder:</div>
+  <div class="col-md-3 cascade">
+    <div class="card pricing-card" onclick="fillForm('Sambar Powder', '450g')">
+      <div class="card-body">
+        <h4 class="card-title mb-3">450 grams</h4>
+        <p class="card-text fs-5 fw-bold">₹300</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3 cascade">
+    <div class="card pricing-card" onclick="fillForm('Sambar Powder', '950g')">
+      <div class="card-body">
+        <h4 class="card-title mb-3">950 grams</h4>
+        <p class="card-text fs-5 fw-bold">₹600</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3 cascade">
+    <div class="card pricing-card" onclick="fillForm('Sambar Powder', '1950g')">
+      <div class="card-body">
+        <h4 class="card-title mb-3">1950 grams</h4>
+        <p class="card-text fs-5 fw-bold">₹1100</p>
+      </div>
+    </div>
+  </div>
 
-          <!-- Health Mix Powder Section -->
-          <div class="col-md-12 text-start fw-bold fs-5 mt-4">
-            Health Mix Powder:
-          </div>
-          <div class="col-md-12 text-start fw-bold fs-5 mt-2">
-            <span class="info-icon" onmouseover="showIngredients(event)" onmouseout="hideIngredients()">Ingredients ℹ️</span>
-          </div>
-          <div class="col-md-12 text-start mt-1">
-            <div id="ingredient-tooltip">
-              <ul>
-                <li>Raagi (Finger Millet)</li>
-                <li>Kambu (Pearl Millet)</li>
-                <li>Cholam (Sorghum)</li>
-                <li>Varagu Rice (Kodo Millet)</li>
-                <li>Samba Gothumai (Samba Wheat)</li>
-                <li>Barli (Barley)</li>
-                <li>Nilakadalai (Groundnut)</li>
-                <li>Pottukadalai (Roasted Gram)</li>
-                <li>Pachai Payaru (Green Gram)</li>
-                <li>Soya (Soybean)</li>
-                <li>Aali Vidhai (Flaxseeds)</li>
-                <li>Sivappu Arisi (Red Rice)</li>
-                <li>Makka Cholam (Corn)</li>
-                <li>Kollu (Horse Gram)</li>
-              </ul>
-            </div>
-          </div>
+  <!-- Health Mix Powder Section -->
+  <div class="col-md-12 text-start fw-bold fs-5 mt-4">Health Mix Powder:</div>
+  <div class="col-md-12 text-start fw-bold fs-5 mt-2">
+    <span class="info-icon" onmouseover="showIngredients(event)" onmouseout="hideIngredients()">Ingredients ℹ️</span>
+  </div>
+  <div class="col-md-12 text-start mt-1">
+    <div id="ingredient-tooltip" style="display: none; position: absolute; background: rgba(102, 51, 0, 0.9); color: #fff; padding: 10px; border-radius: 5px; font-size: 15px; font-family: 'Georgia', serif; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); max-width: 250px; z-index: 1000;">
+      <ul>
+        <li>Raagi (Finger Millet)</li>
+        <li>Kambu (Pearl Millet)</li>
+        <li>Cholam (Sorghum)</li>
+        <li>Varagu Rice (Kodo Millet)</li>
+        <li>Samba Gothumai (Samba Wheat)</li>
+        <li>Barli (Barley)</li>
+        <li>Nilakadalai (Groundnut)</li>
+        <li>Pottukadalai (Roasted Gram)</li>
+        <li>Pachai Payaru (Green Gram)</li>
+        <li>Soya (Soybean)</li>
+        <li>Aali Vidhai (Flaxseeds)</li>
+        <li>Sivappu Arisi (Red Rice)</li>
+        <li>Makka Cholam (Corn)</li>
+        <li>Kollu (Horse Gram)</li>
+      </ul>
+    </div>
+  </div>
+  <div class="col-md-3 cascade">
+    <div class="card pricing-card" onclick="fillForm('Health Mix Powder', '450g')">
+      <div class="card-body">
+        <h4 class="card-title mb-3">450 grams</h4>
+        <p class="card-text fs-5 fw-bold">₹250</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3 cascade">
+    <div class="card pricing-card" onclick="fillForm('Health Mix Powder', '950g')">
+      <div class="card-body">
+        <h4 class="card-title mb-3">950 grams</h4>
+        <p class="card-text fs-5 fw-bold">₹500</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3 cascade">
+    <div class="card pricing-card" onclick="fillForm('Health Mix Powder', '1950g')">
+      <div class="card-body">
+        <h4 class="card-title mb-3">1950 grams</h4>
+        <p class="card-text fs-5 fw-bold">₹900</p>
+      </div>
+    </div>
+  </div>
+</div>
 
-          <div class="col-md-3 cascade">
-            <div class="card pricing-card">
-              <div class="card-body">
-                <h4 class="card-title mb-3">450 grams</h4>
-                <p class="card-text fs-5 fw-bold">₹250</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 cascade">
-            <div class="card pricing-card">
-              <div class="card-body">
-                <h4 class="card-title mb-3">950 grams</h4>
-                <p class="card-text fs-5 fw-bold">₹500</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 cascade">
-            <div class="card pricing-card">
-              <div class="card-body">
-                <h4 class="card-title mb-3">1950 grams</h4>
-                <p class="card-text fs-5 fw-bold">₹900</p>
-              </div>
-            </div>
-          </div>
-        </div>
+<script>
+  function fillForm(product, weight) {
+    document.getElementById('Product').value = product;
+    document.getElementById('weight').value = weight;
+    updatePrice();
+    document.getElementById('order').scrollIntoView({ behavior: 'smooth' });
+  }
+
+  function showIngredients(event) {
+    const tooltip = document.getElementById("ingredient-tooltip");
+    tooltip.style.display = "block";
+    const rect = event.target.getBoundingClientRect();
+    tooltip.style.left = rect.right + 10 + "px";
+    tooltip.style.top = rect.top + "px";
+  }
+  function hideIngredients() {
+    document.getElementById("ingredient-tooltip").style.display = "none";
+  }
+</script>
+
+
+<script>
+  function fillForm(product, weight) {
+    document.getElementById('Product').value = product;
+    document.getElementById('weight').value = weight;
+    updatePrice();
+    document.getElementById('order').scrollIntoView({ behavior: 'smooth' });
+  }
+</script>
+
         <p class="card-text fs-5 fw-bold mt-3">
           Additional courier charges may apply.
         </p>
@@ -353,52 +386,88 @@
   </section>
 
   <!-- Order Form Section with Content Box -->
-  <section class="pb-5 cascade" id="order">
+  <!-- Order Form Section -->
+<section class="pb-5 cascade" id="order">
     <div class="container content-box">
-      <h2 class="text-center animate__animated animate__fadeInDown">Place Your Order</h2>
-      <div class="row justify-content-center">
-        <div class="col-md-6 form-section animate__animated animate__fadeInUp">
-          <form onsubmit="sendWhatsApp(event)">
-            <div class="mb-3">
-              <label for="name" class="form-label fw-semibold">Full Name</label>
-              <input type="text" class="form-control" id="name" placeholder="Enter your full name" required>
+        <h2 class="text-center animate__animated animate__fadeInDown">Place Your Order</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-6 form-section animate__animated animate__fadeInUp">
+                <form onsubmit="sendWhatsApp(event)">
+                    <div class="mb-3">
+                        <label for="name" class="form-label fw-semibold">Full Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="Product" class="form-label fw-semibold">Select Product</label>
+                        <select class="form-select" id="Product" required onchange="updatePrice()">
+                            <option value="Sambar Powder">Sambar Powder</option>
+                            <option value="Health Mix Powder">Health Mix Powder</option>
+                        </select>
+                    </div>   
+                    <div class="mb-3">
+                        <label for="weight" class="form-label fw-semibold">Select Weight</label>
+                        <select class="form-select" id="weight" required onchange="updatePrice()">
+                            <option value="450g">450g</option>
+                            <option value="950g">950g</option>
+                            <option value="1950g">1950g</option>
+                            <option value="2900g">2900g</option>
+                            <option value="3900g">3900g</option>
+                            <option value="4900g">4900g</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="price" class="form-label fw-semibold">Price excluding courier (₹)</label>
+                        <input type="text" class="form-control" id="price" readonly>
+                    </div>
+                    <div class="mb-3">
+                        <label for="address" class="form-label fw-semibold">Delivery Address (Enter with PIN code)</label>
+                        <input type="text" class="form-control" id="address" placeholder="Enter your delivery address" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="phone" class="form-label fw-semibold">Phone Number</label>
+                        <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
+                    </div>
+
+                    <!-- Payment Methods Section -->
+                    <div class="payment-section text-center mt-4">
+                        <p class="fw-bold">Available Payment Methods:</p>
+                        <div class="payment-icons">
+                            
+                            <img src="payment_methods_logo.png" alt="UPI" class="payment-logo">
+                            
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-success w-100 mt-3">Create Order</button>
+                </form>
             </div>
-            <div class="mb-3">
-              <label for="Product" class="form-label fw-semibold">Select Product</label>
-              <select class="form-select" id="Product" required onchange="updatePrice()">
-                <option value="Sambar Powder">Sambar Powder</option>
-                <option value="Health Mix Powder">Health Mix Powder</option>
-              </select>
-            </div>
-            <div class="mb-3">
-              <label for="weight" class="form-label fw-semibold">Select Weight</label>
-              <select class="form-select" id="weight" required onchange="updatePrice()">
-                <option value="450g">450g</option>
-                <option value="950g">950g</option>
-                <option value="1950g">1950g</option>
-                <option value="2900g">2900g</option>
-                <option value="3900g">3900g</option>
-                <option value="4900g">4900g</option>
-              </select>
-            </div>
-            <div class="mb-3">
-              <label for="price" class="form-label fw-semibold">Price excluding courier(₹)</label>
-              <input type="text" class="form-control" id="price" readonly>
-            </div>
-            <div class="mb-3">
-              <label for="address" class="form-label fw-semibold">Delivery Address (Enter with PIN code)</label>
-              <input type="text" class="form-control" id="address" placeholder="Enter your delivery address" required>
-            </div>
-            <div class="mb-3">
-              <label for="phone" class="form-label fw-semibold">Phone Number</label>
-              <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
-            </div>
-            <button type="submit" class="btn btn-success w-100">Create Order</button>
-          </form>
         </div>
-      </div>
     </div>
-  </section>
+</section>
+
+<!-- Payment Icons Styling -->
+<style>
+    .payment-section {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .payment-icons {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .payment-logo {
+        width: 1000px; /* Smaller size */
+        height: 40px;
+        object-fit: contain;
+        border-radius: 15px;
+    }
+</style>
+
+
 
   <!-- WhatsApp Section -->
   <section class="cascade">
